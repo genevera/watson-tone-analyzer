@@ -10,7 +10,7 @@ class ToneAnalyzer
 
   def analyze(text)
     response = HTTP.basic_auth(:user => @username, :pass => @password)
-                   .post(@url, :json => { "text": text})
+                   .post(@url, :json => { "text" => text })
     return JSON.parse(response)
   end
 end
